@@ -1,8 +1,9 @@
 class Book {
-    constructor(title, author, isbn) {
+    constructor(title, author, isbn,AAA) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
+        this.AAA = AAA;
        
       
     }
@@ -41,6 +42,7 @@ class Book {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
+        <td>${book.AAA}</td>
         
         <td><a href="#" class="btn btn-danger btn-sm delete"> X </a></td>
       `;
@@ -76,6 +78,7 @@ class Book {
       document.querySelector('#title').value = '';
       document.querySelector('#author').value = '';
       document.querySelector('#isbn').value = '';
+      document.querySelector('#message').value = '';
       
     }
   }
@@ -124,14 +127,15 @@ class Book {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
+    const AAA = document.querySelector('#message').value;
    
   
     // 12. Validate
-    if(title === '' || author === '' || isbn === '') {
+    if(title === '' || author === '' || isbn === '' || AAA === '' ) {
       UI.showAlert('Please fill in all fields', 'danger');
     } else {
       // 6. Instatiate book
-      const book = new Book(title, author, isbn);
+      const book = new Book(title, author, isbn, AAA);
       // console.log(book);
   
       // 8. Add Book to UI
