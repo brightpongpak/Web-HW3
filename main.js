@@ -3,6 +3,7 @@ class Book {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
+       
       
     }
   }
@@ -40,6 +41,7 @@ class Book {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
+        
         <td><a href="#" class="btn btn-danger btn-sm delete"> X </a></td>
       `;
   
@@ -74,6 +76,7 @@ class Book {
       document.querySelector('#title').value = '';
       document.querySelector('#author').value = '';
       document.querySelector('#isbn').value = '';
+      
     }
   }
   
@@ -121,6 +124,7 @@ class Book {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
+   
   
     // 12. Validate
     if(title === '' || author === '' || isbn === '') {
